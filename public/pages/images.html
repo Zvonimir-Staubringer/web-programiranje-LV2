@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- SEO: page description shown in search engine results -->
+	<meta name="description" content="Movie image gallery with posters and scenes from classic and modern films.">
+
+	<!-- SEO: keywords for search engine ranking -->
+	<meta name="keywords" content="movies, movie posters, film gallery, cinema images">
+
+	<link rel="stylesheet" href="../styles/style_images.css">
+	<title>Movie Gallery</title>
+</head>
+
+<body>
+
+	<!-- ==================== HEADER ==================== -->
+	<header>
+		<h1 class="header-title">Movie Gallery</h1>
+	</header>
+
+	<!-- ==================== NAVIGATION ==================== -->
+	<nav aria-label="Primary navigation">
+		<ul class="nav-menu">
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="./graph.html">Graphs</a></li>
+			<li><a href="./images.html">Images</a></li>
+		</ul>
+	</nav>
+
+	<!-- ==================== MAIN ==================== -->
+	<main>
+
+		<!-- Gallery section -->
+		<section class="gallery-section" aria-labelledby="gallery-title">
+			<h2 id="gallery-title">Film Posters & Scenes</h2>
+
+			<div class="gallery" role="list" aria-label="Movie image gallery">
+
+				<!-- Image 1 -->
+				<figure class="gallery-item" role="listitem">
+					<a href="#img1" aria-label="Open fullscreen view of Batman">
+						<img
+							src="../images/images.jpg"
+							alt="Batman movie poster"
+							loading="lazy"
+						>
+					</a>
+					<figcaption>Batman</figcaption>
+				</figure>
+
+				<!-- Image 2 -->
+				<figure class="gallery-item" role="listitem">
+					<a href="#img2" aria-label="Open fullscreen view of La La Land">
+						<img
+							src="../images/La_La_Land_(film).png"
+							alt="La La Land movie poster"
+							loading="lazy"
+						>
+					</a>
+					<figcaption>La La Land</figcaption>
+				</figure>
+
+				<!-- Image 3 -->
+				<figure class="gallery-item" role="listitem">
+					<a href="#img3" aria-label="Open fullscreen view of Forest Gump">
+						<img
+							src="../images/forestgump.jpg"
+							alt="Incendies movie poster"
+							loading="lazy"
+						>
+					</a>
+					<figcaption>Incendies</figcaption>
+				</figure>
+
+				<!-- Image 4 -->
+				<figure class="gallery-item" role="listitem">
+					<a href="#img4" aria-label="Open fullscreen view of Captain America">
+						<img
+							src="../images/captainamerica.jpg"
+							alt="Sentimental Value movie poster"
+							loading="lazy"
+						>
+					</a>
+					<figcaption>Sentimental Value</figcaption>
+				</figure>
+
+				<!-- Image 5 -->
+				<figure class="gallery-item" role="listitem">
+					<a href="#img5" aria-label="Open fullscreen view of Soul">
+						<img
+							src="../images/soul.jpg"
+							alt="Soul movie poster"
+							loading="lazy"
+						>
+					</a>
+					<figcaption>Soul</figcaption>
+				</figure>
+
+				<!-- Image 6 -->
+				<figure class="gallery-item" role="listitem">
+					<a href="#img6" aria-label="Open fullscreen view of Harry Potter">
+						<img
+							src="../images/harry_potter.jpg"
+							alt="Harry Potter movie poster"
+							loading="lazy"
+						>
+					</a>
+					<figcaption>Harry Potter</figcaption>
+				</figure>
+
+			</div>
+		</section>
+
+		<!-- ==================== CSS-ONLY LIGHTBOXES ==================== -->
+		<!-- Each lightbox is shown/hidden via the :target pseudo-class -->
+
+		<!-- Lightbox 1 -->
+		<div id="img1" class="lightbox" role="dialog" aria-label="Fullscreen view of Batman">
+			<div class="lightbox-content">
+				<a href="#" class="lightbox-close" aria-label="Close fullscreen view">&times;</a>
+				<figure>
+					<img src="../images/images.jpg" alt="Batman movie poster - fullscreen view">
+					<figcaption>Batman</figcaption>
+				</figure>
+			</div>
+		</div>
+
+		<!-- Lightbox 2 -->
+		<div id="img2" class="lightbox" role="dialog" aria-label="Fullscreen view of La La Land">
+			<div class="lightbox-content">
+				<a href="#" class="lightbox-close" aria-label="Close fullscreen view">&times;</a>
+				<figure>
+					<img src="../images/La_La_Land_(film).png" alt="La La Land movie poster - fullscreen view">
+					<figcaption>La La Land</figcaption>
+				</figure>
+			</div>
+		</div>
+
+		<!-- Lightbox 3 -->
+		<div id="img3" class="lightbox" role="dialog" aria-label="Fullscreen view of Incendies">
+			<div class="lightbox-content">
+				<a href="#" class="lightbox-close" aria-label="Close fullscreen view">&times;</a>
+				<figure>
+					<img src="../images/forestgump.jpg" alt="Forest Gump movie poster - fullscreen view">
+					<figcaption>Forest Gump</figcaption>
+				</figure>
+			</div>
+		</div>
+
+		<!-- Lightbox 4 -->
+		<div id="img4" class="lightbox" role="dialog" aria-label="Fullscreen view of Sentimental Value">
+			<div class="lightbox-content">
+				<a href="#" class="lightbox-close" aria-label="Close fullscreen view">&times;</a>
+				<figure>
+					<img src="../images/captainamerica.jpg" alt="Captain America movie poster - fullscreen view">
+					<figcaption>Captain America</figcaption>
+				</figure>
+			</div>
+		</div>
+
+		<!-- Lightbox 5 -->
+		<div id="img5" class="lightbox" role="dialog" aria-label="Fullscreen view of The Two Towers">
+			<div class="lightbox-content">
+				<a href="#" class="lightbox-close" aria-label="Close fullscreen view">&times;</a>
+				<figure>
+					<img src="../images/soul.jpg" alt="Soul movie poster - fullscreen view">
+					<figcaption>Soul</figcaption>
+				</figure>
+			</div>
+		</div>
+
+		<!-- Lightbox 6 -->
+		<div id="img6" class="lightbox" role="dialog" aria-label="Fullscreen view of Django Unchained">
+			<div class="lightbox-content">
+				<a href="#" class="lightbox-close" aria-label="Close fullscreen view">&times;</a>
+				<figure>
+					<img src="../images/harry_potter.jpg" alt="Harry Potter movie poster - fullscreen view">
+					<figcaption>Harry potter</figcaption>
+				</figure>
+			</div>
+		</div>
+
+	</main>
+
+	<!-- ==================== FOOTER ==================== -->
+	<footer>
+		<p>&copy; 2026. Web Programming. All rights reserved.</p>
+	</footer>
+
+</body>
+</html>

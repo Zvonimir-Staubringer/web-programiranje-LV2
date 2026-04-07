@@ -1,0 +1,248 @@
+/* ============================================
+   VARIJABLE
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@300;400;600&display=swap');
+
+  
+:root {
+  --boja-primarna: #0d2137;
+  --boja-sekundarna: #1a3a5c;
+  --boja-akcent: #e85d04;
+  --boja-akcent-svijetla: #f48c06;
+  --boja-tekst: #e8edf2;
+  --boja-pozadina: #071526;
+  --boja-kartica: #112240;
+
+  --font-naslov: 'Bebas Neue', sans-serif;
+  --font-tekst: 'IBM Plex Sans', sans-serif;
+
+  --razmak: 20px;
+  --zaobljenje: 8px;
+  --sjena: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-tekst);
+  background: var(--boja-pozadina);
+  color: var(--boja-tekst);
+  min-height: 100vh;
+
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(26,58,92,0.2), transparent),
+    radial-gradient(circle at 80% 20%, rgba(232,93,4,0.1), transparent);
+}
+
+header {
+  background: linear-gradient(135deg, var(--boja-primarna), var(--boja-sekundarna));
+  padding: 1.5rem;
+  border-bottom: 3px solid var(--boja-akcent);
+  text-align: center;
+}
+
+.header-title {
+  font-family: var(--font-naslov);
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: 3px;
+}
+
+nav {
+	background: var(--boja-kartica);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+.nav-menu {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	list-style: none;
+}
+
+.nav-menu li a {
+	display: block;
+	padding: 12px 20px;
+	text-decoration: none;
+	color: var(--boja--tekst);
+	font-weight: 600;
+	transition: 0.3s;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a:focus {
+	color: #fff;
+	background: var(--boja-akcent);
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: var(--razmak);
+}
+
+/* ============================================
+   SECTION
+   ============================================ */
+.content-section {
+  margin-bottom: var(--razmak);
+}
+
+.content-section h2 {
+  font-family: var(--font-naslov);
+  margin-bottom: 10px;
+  color: var(--boja-akcent);
+}
+
+/* ============================================
+   TABLE + IMAGE LAYOUT
+   ============================================ */
+.table-image-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--razmak);
+}
+
+/* ============================================
+   TABLE
+   ============================================ */
+.table-wrapper {
+  overflow-x: auto;
+  box-shadow: var(--sjena);
+  border-radius: var(--zaobljenje);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: var(--boja-akcent);
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  color: white;
+  font-size: 0.8rem;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(255,255,255,0.05);
+}
+
+/* IZMJENA 2: hover highlight */
+tbody tr:hover {
+  background: rgba(232,93,4,0.2);
+  transform: scale(1.01);
+}
+
+/* ============================================
+   IMAGE ASIDE
+   ============================================ */
+.image-aside {
+  display: flex;
+  align-items: center;
+}
+
+.featured-image {
+  width: 100%;
+  border-radius: var(--zaobljenje);
+  box-shadow: var(--sjena);
+
+  /* IZMJENA 3: filter efekt */
+  filter: brightness(0.9);
+  transition: 0.3s;
+}
+
+.featured-image:hover {
+  filter: brightness(1.1);
+  transform: scale(1.03);
+}
+
+/* ============================================
+   BUTTON
+   ============================================ */
+.cta-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: var(--boja-akcent);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--zaobljenje);
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: var(--boja-akcent-svijetla);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   ARTICLE
+   ============================================ */
+article {
+  background: var(--boja-kartica);
+  padding: var(--razmak);
+  border-left: 4px solid var(--boja-akcent);
+  border-radius: var(--zaobljenje);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--boja-primarna);
+  margin-top: 20px;
+  font-size: 0.85rem;
+}
+
+/* ============================================
+   ANIMACIJE
+   ============================================ */
+.fade-in {
+  animation: fadeIn 1s ease;
+}
+
+.slide-in {
+  animation: slideIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 767px) {
+  .table-image-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
