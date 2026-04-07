@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Zvonimir-Staubringer/web-programiranje-LV2#readme",
   "dependencies": {
+    "ejs": "^5.0.1",
     "express": "^4.18.2"
   }
 }

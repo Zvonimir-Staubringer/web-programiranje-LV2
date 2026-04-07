@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- SEO: page description shown in search engine results -->
+	<meta name="description" content="Movie image gallery with posters and scenes from classic and modern films.">
+
+	<!-- SEO: keywords for search engine ranking -->
+	<meta name="keywords" content="movies, movie posters, film gallery, cinema images">
+
+	<link rel="stylesheet" href="/styles/style_images.css">
+	<title>Movie Gallery</title>
+</head>
+
+<body>
+
+	<!-- ==================== HEADER ==================== -->
+	<header>
+		<h1 class="header-title">Movie Gallery</h1>
+	</header>
+
+	<!-- ==================== NAVIGATION ==================== -->
+	<nav aria-label="Primary navigation">
+		<ul class="nav-menu">
+			<li><a href="/">Home</a></li>
+			<li><a href="../pages/graph.html">Graphs</a></li>
+			<li><a href="/images">Images</a></li>
+		</ul>
+	</nav>
+
+	<!-- ==================== MAIN ==================== -->
+	<main>
+        <div class="gallery" role="list">
+        <% images.forEach((img, index) => { %>
+            <figure class="gallery-item" role="listitem">
+            <a href="#img<%= index %>">
+                <img
+                    src="/images/<%= img.file %>"
+                    alt="<%= img.title %> movie poster"
+                    loading="lazy"
+                >
+            </a>
+            <figcaption><%= img.title %></figcaption>
+            </figure>
+        <% }) %>
+        </div>
+
+        <% images.forEach((img, index) => { %>
+        <div id="img<%= index %>" class="lightbox">
+            <div class="lightbox-content">
+            <a href="#" class="lightbox-close">&times;</a>
+            <figure>
+                <img src="/images/<%= img.file %>" alt="<%= img.title %> fullscreen">
+                <figcaption><%= img.title %></figcaption>
+            </figure>
+            </div>
+        </div>
+        <% }) %>
+	</main>
+
+	<!-- ==================== FOOTER ==================== -->
+	<footer>
+		<p>&copy; 2026. Web Programming. All rights reserved.</p>
+	</footer>
+
+</body>
+</html>
